@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="A bilingual English and Urdu quiz with 20 easy MCQs about basic criminal and civil law in Pakistan."
+  />
+  <title>Pakistan Criminal & Civil Law Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="badge">20 MCQs · ENGLISH + اردو</div>
+
+      <h1>
+        Pakistan Criminal &amp; Civil Law Quiz
+        <span class="urdu heading-urdu" lang="ur" dir="rtl">
+          پاکستان فوجداری و دیوانی قانون کوئز
+        </span>
+      </h1>
+
+      <p class="subtitle">
+        Select one answer for each question. Your answer locks immediately,
+        and the correct answers are shown only after all 20 questions.
+      </p>
+
+      <p class="urdu subtitle-urdu" lang="ur" dir="rtl">
+        ہر سوال کے لیے ایک جواب منتخب کریں۔ جواب منتخب ہوتے ہی لاک ہو جائے گا،
+        اور درست جوابات تمام 20 سوالات مکمل کرنے کے بعد دکھائے جائیں گے۔
+      </p>
+    </header>
+
+    <section class="quiz-card" aria-live="polite">
+      <div id="quizArea">
+        <div class="topbar">
+          <div class="topline">
+            <span id="counter">Question 1 of 20</span>
+
+            <span class="category">
+              <span id="categoryEnglish"></span>
+              <span
+                class="urdu category-urdu"
+                id="categoryUrdu"
+                lang="ur"
+                dir="rtl"
+              ></span>
+            </span>
+          </div>
+
+          <div
+            class="progress-track"
+            role="progressbar"
+            aria-label="Quiz progress"
+            aria-valuemin="0"
+            aria-valuemax="20"
+            aria-valuenow="1"
+            id="progressTrack"
+          >
+            <div class="progress-bar" id="progressBar"></div>
+          </div>
+        </div>
+
+        <div class="content">
+          <div class="question-block">
+            <h2 class="question" id="questionEnglish"></h2>
+            <p
+              class="urdu question-urdu"
+              id="questionUrdu"
+              lang="ur"
+              dir="rtl"
+            ></p>
+          </div>
+
+          <div class="options" id="options"></div>
+
+          <div class="locked-message" id="lockedMessage" aria-live="polite">
+            <strong>Answer locked.</strong> You cannot change this selection.
+            <span class="urdu" lang="ur" dir="rtl">
+              جواب لاک ہو گیا ہے۔ اب اسے تبدیل نہیں کیا جا سکتا۔
+            </span>
+          </div>
+
+          <div class="actions">
+            <button
+              class="action primary"
+              id="nextBtn"
+              type="button"
+              disabled
+            >
+              Next Question · اگلا سوال
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="results" id="results">
+        <div class="score-ring" id="scoreRing">
+          <div class="score-value" id="scoreValue">0/20</div>
+        </div>
+
+        <h2>
+          Quiz Complete
+          <span class="urdu result-heading-urdu" lang="ur" dir="rtl">
+            کوئز مکمل ہو گیا
+          </span>
+        </h2>
+
+        <p id="resultText"></p>
+        <p
+          class="urdu result-text-urdu"
+          id="resultTextUrdu"
+          lang="ur"
+          dir="rtl"
+        ></p>
+
+        <div class="result-actions">
+          <button class="action primary" id="restartBtn" type="button">
+            Try Again · دوبارہ کوشش کریں
+          </button>
+
+          <button class="action secondary" id="shareBtn" type="button">
+            Share Result · نتیجہ شیئر کریں
+          </button>
+        </div>
+
+        <section class="review-section">
+          <div class="review-heading">
+            <h3>
+              Answer Review
+              <span class="urdu" lang="ur" dir="rtl">جوابات کا جائزہ</span>
+            </h3>
+            <p>
+              Correct and incorrect answers appear here only after completion.
+            </p>
+          </div>
+
+          <div class="review-list" id="reviewList"></div>
+        </section>
+      </div>
+    </section>
+
+    <aside class="source-note">
+      <strong>Educational use only · صرف تعلیمی استعمال کے لیے</strong>
+      <p>
+        This beginner quiz summarizes general concepts. Laws and procedures may
+        change or differ by province and case. It is not legal advice.
+      </p>
+      <p class="urdu" lang="ur" dir="rtl">
+        یہ ابتدائی کوئز عمومی قانونی تصورات کا خلاصہ ہے۔ قوانین اور طریقۂ کار
+        صوبے اور مقدمے کے لحاظ سے مختلف یا تبدیل ہو سکتے ہیں۔ یہ قانونی مشورہ
+        نہیں ہے۔
+      </p>
+
+      <div class="sources">
+        <a
+          href="https://na.gov.pk/uploads/documents/6926e060076ed_467.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Constitution of Pakistan
+        </a>
+        <a
+          href="https://pakistancode.gov.pk/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Pakistan Code
+        </a>
+      </div>
+    </aside>
+  </main>
+
+  <div class="toast" id="toast">Copied!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
